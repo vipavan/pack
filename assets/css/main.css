@@ -1,0 +1,78 @@
+*{
+	-moz-box-sizing:border-box;
+}
+table {
+	width:100%;
+	margin-bottom:50px;
+}
+table th{
+	border:1px solid #000;
+	background:#000;
+	color:#fff;
+	padding:5px;
+}
+table td{
+	border:1px solid #000;
+	padding:5px;
+}
+
+@media screen and (max-width:479px){
+	.hide-columns th:nth-child(4),
+	.hide-columns th:nth-child(5),
+	.hide-columns th:nth-child(6),
+	.hide-columns th:nth-child(7),
+	.hide-columns th:nth-child(8),
+	.hide-columns td:nth-child(4),
+	.hide-columns td:nth-child(5),
+	.hide-columns td:nth-child(6),
+	.hide-columns td:nth-child(7),
+	.hide-columns td:nth-child(8)
+	{
+		display: none;
+	}
+}
+
+@media screen and (max-width:479px){
+	.flip thead{
+		display:none;
+	}
+	.flip td{
+		display:block;
+	}
+	.flip td:before{
+		display:inline-block;
+		width:50%;
+		content:attr(data-column);
+		font-weight:bold;
+	}
+}
+
+@media screen and (max-width:479px){
+	.flip-scroll{
+		display:block;
+		width: 100%;
+	}
+	.flip-scroll thead{
+		display: block;
+		float: left;
+	}
+	.flip-scroll thead th,
+	.flip-scroll tbody td{
+		line-height:20px;
+		text-align:center;
+	}
+	.flip-scroll thead th{
+		display:block;
+	}
+	.flip-scroll tbody{
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.flip-scroll tbody tr{
+		display:inline-block;
+	}
+	.flip-scroll tbody td{
+		display:block;
+	}
+}
